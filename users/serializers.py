@@ -32,6 +32,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         data['username'] = self.user.username
         data['email'] = self.user.email
         data['phone'] = self.user.phone 
+        data['status'] = 1
         return data        
 
 

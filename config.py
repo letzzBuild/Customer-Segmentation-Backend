@@ -1,0 +1,1 @@
+PATH_TO_DATASET = "/home/letzzbuild/Desktop/customer_segmentation/Backend/customer_segmentation/dataset/Customer_data.csv"
