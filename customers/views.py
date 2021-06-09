@@ -1,4 +1,5 @@
 from itertools import count
+from django.http import response
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 import numpy as np
@@ -77,3 +78,15 @@ def SegmentedCustomers(request):
     response['counts'] = countData          
 
     return Response(response)
+
+
+
+@api_view(['GET'])
+def Customers(request):
+    response = {"status":1, "data" : [] ,"message":""}
+    df = pd.read_csv(PATH_TO_DATASET)
+    temp_tuple = ()
+    for data in df.itertuples():
+        response['data'].append(data)
+    response['message'] = "success"    
+    return Response(response)    

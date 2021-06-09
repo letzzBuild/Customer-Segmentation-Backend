@@ -1,1 +1,5 @@
 PATH_TO_DATASET = "/home/letzzbuild/Desktop/customer_segmentation/Backend/customer_segmentation/dataset/Customer_data.csv"
+FROM_EMAIL = "gautampatil728gp4@gmail.com"
+TO_EMAIL = "letzzBuild@gmail.com"
+LOGIN_EMAIL = "gautampatil728gp4@gmail.com"
+LOGIN_EMAIL_PASSWORD = "letzzBuild_vision24"
