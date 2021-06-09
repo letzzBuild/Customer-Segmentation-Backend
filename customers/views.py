@@ -14,11 +14,11 @@ from config import PATH_TO_DATASET
 def SegmentedCustomers(request):
     response = {}
     countData = { 
-        "cluster 0":0,
-        "cluster 1":0,
-        "cluster 2":0,
-        "cluster 3":0,
-        "cluster 4":0   
+        "cluster0":0,
+        "cluster1":0,
+        "cluster2":0,
+        "cluster3":0,
+        "cluster4":0   
     }
     series = [
         {"name":"cluster 0", "data" :[] },
@@ -70,11 +70,11 @@ def SegmentedCustomers(request):
             temp_cordinate_list = [] 
     response['series'] = series
     response['status'] = 1 
-    countData['cluster 0'] = len(df[(df['cluster']==0)])
-    countData['cluster 1'] = len(df[(df['cluster']==1)])
-    countData['cluster 2'] = len(df[(df['cluster']==2)])
-    countData['cluster 3'] = len(df[(df['cluster']==3)])
-    countData['cluster 4'] = len(df[(df['cluster']==4)])
+    countData['cluster0'] = len(df[(df['cluster']==0)])
+    countData['cluster1'] = len(df[(df['cluster']==1)])
+    countData['cluster2'] = len(df[(df['cluster']==2)])
+    countData['cluster3'] = len(df[(df['cluster']==3)])
+    countData['cluster4'] = len(df[(df['cluster']==4)])
     response['counts'] = countData          
 
     return Response(response)
